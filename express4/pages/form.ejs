@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ <div class="product">
+    <form method="POST" action="/products" enctype="application/x-www-form-urlencoded">
+        <input type="text" placeholder="title" name="tittle">
+        <input type="text" placeholder="price" name="price">
+        <input type="text" placeholder="rating" name="rating">
+        <input type="text" placeholder="thumbnail" name="thumbnail">
+        <button onclick="otp()">hello wolrd</button>
+        <button>add product</button>
+    </form>
+ </div>
+ <script src="/socket.io/socket.io.js"></script>
+ <script>
+    const socket =  io();
+   
+    socket.emit("msg",{pritam:"kr rahi ho"})
+    socket.on('send', ()=>{
+        console.log("helo wolrd")
+    })
+
+ </script>
+</body>
+</html>
